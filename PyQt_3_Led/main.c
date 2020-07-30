@@ -22,7 +22,7 @@ void uart_write(unsigned char data)
 }
 
 char arr[10];
-int state=0, i=0, finish=0;
+int state = 0, i = 0, finish = 0;
 
 void uart_string(char* str)
 {
