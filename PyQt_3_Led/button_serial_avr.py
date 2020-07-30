@@ -1,9 +1,9 @@
 from button import *
 import serial
 
-L1_State=0
-L2_State=0
-L3_State=0
+L1_State = 0
+L2_State = 0
+L3_State = 0
 
 ser = serial.Serial(
 	port='COM6', 
