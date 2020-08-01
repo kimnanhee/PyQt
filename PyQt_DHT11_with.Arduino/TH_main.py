@@ -5,7 +5,7 @@ import threading
 from time import sleep
 
 ser = serial.Serial(
-	port='COM4', 
+	port='COM4', # 아두이노 연결 COM 포트
 	baudrate=9600, 
 	parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -15,9 +15,9 @@ ser = serial.Serial(
 def read_thread(ui):
 	while True:
 		data = ser.readline().decode('utf-8')
-		print(data)
-		ui.label_humi_value.setText(data[2:7])
-		ui.label_temp_value.setText(data[11:16])
+		print(data) # 확인용 받아온 데이터 출력
+		ui.label_temp_value.setText(data[2:7]) # 아두이노에서 받는 온도값 파싱
+		ui.label_humi_value.setText(data[11:16]) # 습도값 파싱
 		sleep(3)
 
 if __name__ == "__main__":
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
 
-    th = threading.Thread(target=read_thread, args=(ui,))
+    th = threading.Thread(target=read_thread, args=(ui,)) # 스레드 설정, read_thread함수에 인자로 ui를 넘겨준다
     th.daemon = True;
     th.start()
 
