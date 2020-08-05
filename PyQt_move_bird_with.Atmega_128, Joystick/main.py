@@ -3,41 +3,35 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import serial
 import threading
 from time import sleep
-'''
+
 ser = serial.Serial(
-	port='COM4', # 아두이노 연결 COM 포트
+	port='COM6', # 아두이노 연결 COM 포트
 	baudrate=9600, 
 	parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS,
     timeout=1)
-'''
+
 
 def read_thread(ui):
+    bird_x = 300
+    bird_y = 190
     while True:
-        for i in range(1, 651, 5):
-            ui.label_bird.move(i, 0)
-            sleep(0.01)
+        data = ser.read(4)
+        bird_x += (data[1]-48-1)*20
+        bird_y += (data[2]-48-1)*20
 
-        for i in range(1, 451, 5):
-            ui.label_bird.move(650, i)
-            sleep(0.01)
+        if(bird_x > 650):
+            bird_x = 650
+        if(bird_y > 350):
+            bird_y = 350
+        if(bird_x < 0):
+            bird_x = 0
+        if(bird_y < 0):
+            bird_y = 0
 
-        for i in range(650, 0, -5):
-            ui.label_bird.move(i, 450)
-            sleep(0.01)
-
-
-        for i in range(450, 0, -5):
-            ui.label_bird.move(0, i)
-            sleep(0.01)
-
-    while False:
-        data = ser.readline().decode('utf-8')
-        print(data) # 확인용 받아온 데이터 출력
-        ui.label_temp_value.setText(data[2:7]) # 아두이노에서 받는 온도값 파싱
-        ui.label_humi_value.setText(data[11:16]) # 습도값 파싱
-        sleep(3)
+        print(data[1], data[2], bird_x, bird_y) # 확인용 받아온 데이터 출력
+        ui.label_bird.move(bird_x, bird_y)
 
 if __name__ == "__main__":
     import sys
