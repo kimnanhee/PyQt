@@ -11,6 +11,9 @@ def read_thread(ui):
 		R_value = ui.horizon_R.value() # horizon Bar의 값 가져오기
 		G_value = ui.horizon_G.value()
 		B_value = ui.horizon_B.value()
+		ui.value_R.setNum(R_value)
+		ui.value_G.setNum(G_value)
+		ui.value_B.setNum(B_value)
 		ui.btn_color.setStyleSheet("background-color:rgb(%d, %d, %d);" % (R_value, G_value, B_value)) # 버튼 색깔 설정하기
 		print(R_value, G_value, B_value)
 		sleep(0.1)
