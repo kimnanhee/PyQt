@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_temp">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>100</y>
+      <width>150</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_gas">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>100</y>
+      <width>150</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fire">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>100</y>
+      <width>150</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_now_back">
+    <property name="geometry">
+     <rect>
+      <x>139</x>
+      <y>40</y>
+      <width>621</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+background-color: rgb(170, 164, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_now">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>101</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 13pt &quot;Arial&quot;;
+background-color: rgb(221, 242, 255);</string>
+    </property>
+    <property name="text">
+     <string>Sensing</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_fan">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>230</y>
+      <width>150</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Fan</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_servo">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>330</y>
+      <width>150</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Servo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_relay">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>430</y>
+      <width>150</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Relay</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_set_back">
+    <property name="geometry">
+     <rect>
+      <x>129</x>
+      <y>190</y>
+      <width>611</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 164, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_set">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>111</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+font: 75 13pt &quot;Arial&quot;;
+background-color: rgb(221, 242, 255);</string>
+    </property>
+    <property name="text">
+     <string>Setting</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_auto">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>130</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Automatic</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temp">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>60</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Arial&quot;;
+background-color: rgb(170, 164, 255);</string>
+    </property>
+    <property name="text">
+     <string>Temperature</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gas">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>60</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Arial&quot;;
+background-color: rgb(170, 164, 255);</string>
+    </property>
+    <property name="text">
+     <string>Gas</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fire">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>60</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Arial&quot;;
+background-color: rgb(170, 164, 255);</string>
+    </property>
+    <property name="text">
+     <string>Fire</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_manual">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>380</y>
+      <width>130</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Manual</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_made">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>550</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>made. nanhee</string>
+    </property>
+   </widget>
+   <zorder>label_set</zorder>
+   <zorder>label_set_back</zorder>
+   <zorder>label_now_back</zorder>
+   <zorder>label_gas</zorder>
+   <zorder>label_fire</zorder>
+   <zorder>label_temp</zorder>
+   <zorder>label_now</zorder>
+   <zorder>pushButton_fan</zorder>
+   <zorder>pushButton_servo</zorder>
+   <zorder>pushButton_relay</zorder>
+   <zorder>checkBox_auto</zorder>
+   <zorder>temp</zorder>
+   <zorder>gas</zorder>
+   <zorder>fire</zorder>
+   <zorder>checkBox_manual</zorder>
+   <zorder>label_made</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
