@@ -5,7 +5,7 @@ import threading
 from time import sleep
 
 ser = serial.Serial(
-	port='COM6', 
+	port='COM5', 
 	baudrate=9600, 
 	parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -16,27 +16,30 @@ def read_thread(ui):
 	while True:
 		data = ser.readline().decode('utf-8')
 		print(data) # 확인용 받아온 데이터 출력
-		ui.label_temp.setText(data[2:7]) # 아두이노에서 받는 온도값 파싱
-		ui.label_gas.setText(data[11:16]) # 습도값 파싱
-		ui.label_fire.setText(data[2:7]) 
+		ui.label_temp.setText(data[7:11]) # 온도
+		ui.label_gas.setText(data[19:22]) # 가스
+		ui.label_fire.setText(data[31:34]) # 불꽃
 		sleep(3)
 
 def fan_control(): # fan 버튼이 눌리면 메시지 전송
-	message = ''.join(['fanm'])
-    ser.write(bytes(message.encode()))
+	message = ''.join(['f', 'a', 'n', 'm'])
+	ser.write(bytes(message.encode()))
 
 def servo_control(): # servo 버튼이 눌리면 메시지 전송
-	message = ''.join(['serm'])
-    ser.write(bytes(message.encode()))
+	message = ''.join(['s', 'e', 'r', 'm'])
+	ser.write(bytes(message.encode()))
 
 def relay_control(): # relay 버튼이 눌리면 메시지 전송
-	message = ''.join(['rela'])
-    ser.write(bytes(message.encode()))
+	message = ''.join(['r', 'e', 'l', 'a'])
+	ser.write(bytes(message.encode()))
 
 def signals(self): # 각 버튼이 눌렸을 때 함수 호출
 	self.pushButton_fan.clicked.connect(fan_control)
 	self.pushButton_servo.clicked.connect(servo_control)
 	self.pushButton_relay.clicked.connect(relay_control)
+	self.checkBox_auto.isChecked.connect(auto_control)
+	self.checkBox_manual.isChecked.connect(manual_control)
+
 
 Ui_MainWindow.signals = signals
 
