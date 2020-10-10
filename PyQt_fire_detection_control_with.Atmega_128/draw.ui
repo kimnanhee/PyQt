@@ -186,22 +186,6 @@ background-color: rgb(221, 242, 255);</string>
      <string>Setting</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_auto">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>270</y>
-      <width>130</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Arial&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Automatic</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="temp">
     <property name="geometry">
      <rect>
@@ -253,7 +237,36 @@ background-color: rgb(170, 164, 255);</string>
      <string>Fire</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_manual">
+   <widget class="QLabel" name="label_made">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>550</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>made. nanhee</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_auto">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>130</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Auto</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_manual">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -269,19 +282,6 @@ background-color: rgb(170, 164, 255);</string>
      <string>Manual</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_made">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>550</y>
-      <width>100</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>made. nanhee</string>
-    </property>
-   </widget>
    <zorder>label_set</zorder>
    <zorder>label_set_back</zorder>
    <zorder>label_now_back</zorder>
@@ -292,12 +292,12 @@ background-color: rgb(170, 164, 255);</string>
    <zorder>pushButton_fan</zorder>
    <zorder>pushButton_servo</zorder>
    <zorder>pushButton_relay</zorder>
-   <zorder>checkBox_auto</zorder>
    <zorder>temp</zorder>
    <zorder>gas</zorder>
    <zorder>fire</zorder>
-   <zorder>checkBox_manual</zorder>
    <zorder>label_made</zorder>
+   <zorder>radioButton_auto</zorder>
+   <zorder>radioButton_manual</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
