@@ -33,24 +33,23 @@ def relay_control(): # relay 버튼이 눌리면 메시지 전송
 	message = ''.join(['r', 'e', 'l', 'a'])
 	ser.write(bytes(message.encode()))
 
-def auto_control():
-	print("hello")
-	
-def manual_control(self):
-	if self.radioButton_manual.checkState() == Qt.Checked():
-		print("auto check")
-	else:
-		print("auto check ??")
+def setting_control(self): # setting group box안의 redio button이 눌리면 호출
+	if self.radioButton_auto.isChecked(): # auto 버튼이 눌리면 메시지 전송
+		message = ''.join(['a', 'u', 't', 'o'])
+		ser.write(bytes(message.encode()))
+	elif self.radioButton_manual.isChecked(): # manual 버튼이 눌리면 메시지 전송
+		message = ''.join(['m', 'a', 'n', 'u'])
+		ser.write(bytes(message.encode()))
 	
 def signals(self): # 각 버튼이 눌렸을 때 함수 호출
 	self.pushButton_fan.clicked.connect(fan_control)
 	self.pushButton_servo.clicked.connect(servo_control)
 	self.pushButton_relay.clicked.connect(relay_control)
-	self.radioButton_auto.stateChanged.connect(auto_control)
-	self.radioButton_manual.stateChanged.connect(manual_control)
-
+	self.radioButton_auto.clicked.connect(self.setting_control)
+	self.radioButton_manual.clicked.connect(self.setting_control)
 
 Ui_MainWindow.signals = signals
+Ui_MainWindow.setting_control = setting_control
 
 if __name__ == "__main__":
     import sys
@@ -59,6 +58,7 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     ui.signals()
+    ui.setting_control()
 
     th = threading.Thread(target=read_thread, args=(ui,)) # 스레드 설정, read_thread함수에 인자로 ui를 넘겨준다
     th.daemon = True;
