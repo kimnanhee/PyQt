@@ -155,10 +155,10 @@ font: 14pt &quot;Arial&quot;;</string>
    <widget class="QLabel" name="label_set_back">
     <property name="geometry">
      <rect>
-      <x>129</x>
+      <x>130</x>
       <y>190</y>
-      <width>611</width>
-      <height>321</height>
+      <width>610</width>
+      <height>320</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -250,37 +250,55 @@ background-color: rgb(170, 164, 255);</string>
      <string>made. nanhee</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_auto">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>270</y>
-      <width>130</width>
-      <height>60</height>
+      <x>170</x>
+      <y>250</y>
+      <width>221</width>
+      <height>201</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+     <string notr="true">background-color: rgb(170, 164, 255);</string>
     </property>
-    <property name="text">
-     <string>Auto</string>
+    <property name="title">
+     <string/>
     </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_manual">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>380</y>
-      <width>130</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Arial&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Manual</string>
-    </property>
+    <widget class="QRadioButton" name="radioButton_auto">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>130</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Arial&quot;;
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Auto</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_manual">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>130</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Arial&quot;;
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Manual</string>
+     </property>
+    </widget>
    </widget>
    <zorder>label_set</zorder>
    <zorder>label_set_back</zorder>
@@ -296,8 +314,7 @@ background-color: rgb(170, 164, 255);</string>
    <zorder>gas</zorder>
    <zorder>fire</zorder>
    <zorder>label_made</zorder>
-   <zorder>radioButton_auto</zorder>
-   <zorder>radioButton_manual</zorder>
+   <zorder>groupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
