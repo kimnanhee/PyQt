@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>100</y>
+      <y>90</y>
       <width>150</width>
       <height>60</height>
      </rect>
@@ -38,7 +38,7 @@ font: 14pt &quot;Arial&quot;;</string>
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>100</y>
+      <y>90</y>
       <width>150</width>
       <height>60</height>
      </rect>
@@ -55,7 +55,7 @@ font: 14pt &quot;Arial&quot;;</string>
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>100</y>
+      <y>90</y>
       <width>150</width>
       <height>60</height>
      </rect>
@@ -72,7 +72,7 @@ font: 14pt &quot;Arial&quot;;</string>
     <property name="geometry">
      <rect>
       <x>139</x>
-      <y>40</y>
+      <y>30</y>
       <width>621</width>
       <height>130</height>
      </rect>
@@ -89,7 +89,7 @@ background-color: rgb(170, 164, 255);</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>40</y>
+      <y>30</y>
       <width>101</width>
       <height>131</height>
      </rect>
@@ -106,7 +106,7 @@ background-color: rgb(221, 242, 255);</string>
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>230</y>
+      <y>220</y>
       <width>150</width>
       <height>60</height>
      </rect>
@@ -122,7 +122,7 @@ background-color: rgb(221, 242, 255);</string>
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>330</y>
+      <y>310</y>
       <width>150</width>
       <height>60</height>
      </rect>
@@ -139,7 +139,7 @@ font: 14pt &quot;Arial&quot;;</string>
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>430</y>
+      <y>400</y>
       <width>150</width>
       <height>60</height>
      </rect>
@@ -156,9 +156,9 @@ font: 14pt &quot;Arial&quot;;</string>
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>190</y>
+      <y>199</y>
       <width>610</width>
-      <height>320</height>
+      <height>281</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -172,9 +172,9 @@ font: 14pt &quot;Arial&quot;;</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>190</y>
+      <y>200</y>
       <width>111</width>
-      <height>321</height>
+      <height>281</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -190,7 +190,7 @@ background-color: rgb(221, 242, 255);</string>
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>60</y>
+      <y>50</y>
       <width>100</width>
       <height>25</height>
      </rect>
@@ -207,7 +207,7 @@ background-color: rgb(170, 164, 255);</string>
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>60</y>
+      <y>50</y>
       <width>100</width>
       <height>25</height>
      </rect>
@@ -224,7 +224,7 @@ background-color: rgb(170, 164, 255);</string>
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>60</y>
+      <y>50</y>
       <width>100</width>
       <height>25</height>
      </rect>
@@ -254,7 +254,7 @@ background-color: rgb(170, 164, 255);</string>
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>250</y>
+      <y>240</y>
       <width>221</width>
       <height>201</height>
      </rect>
@@ -300,6 +300,23 @@ background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_fire_detection">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>500</y>
+      <width>400</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label_set</zorder>
    <zorder>label_set_back</zorder>
    <zorder>label_now_back</zorder>
@@ -315,6 +332,7 @@ background-color: rgb(255, 255, 255);</string>
    <zorder>fire</zorder>
    <zorder>label_made</zorder>
    <zorder>groupBox</zorder>
+   <zorder>label_fire_detection</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
