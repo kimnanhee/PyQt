@@ -5,7 +5,7 @@ import threading
 from time import sleep
 
 ser = serial.Serial(
-	port='COM5', 
+	port='COM6', 
 	baudrate=9600, 
 	parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -15,30 +15,37 @@ ser = serial.Serial(
 def read_thread(ui):
 	while True:
 		data = ser.readline().decode('utf-8')
-		print(data) # 확인용 받아온 데이터 출력
-		ui.label_temp.setText(data[7:11]) # 온도
-		ui.label_gas.setText(data[19:22]) # 가스
-		ui.label_fire.setText(data[31:34]) # 불꽃
-		sleep(3)
+		if data:
+			print(data) # 확인용 받아온 데이터 출력
+
+			if (data[-9:]=="fire fire"):
+				ui.label_fire_detection.setText("fire fire, outbreak")
+			else:
+				ui.label_fire_detection.setText(" ")
+
+			ui.label_temp.setText(data[7:11]) # 온도
+			ui.label_gas.setText(data[19:22]) # 가스
+			ui.label_fire.setText(data[31:34]) # 불꽃
+		sleep(1)
 
 def fan_control(): # fan 버튼이 눌리면 메시지 전송
-	message = ''.join(['f', 'a', 'n', 'm'])
+	message = ''.join(['\x02', 'f', 'a', 'n', 'm', '\x03'])
 	ser.write(bytes(message.encode()))
 
 def servo_control(): # servo 버튼이 눌리면 메시지 전송
-	message = ''.join(['s', 'e', 'r', 'm'])
+	message = ''.join(['\x02', 's', 'e', 'r', 'm', '\x03'])
 	ser.write(bytes(message.encode()))
 
 def relay_control(): # relay 버튼이 눌리면 메시지 전송
-	message = ''.join(['r', 'e', 'l', 'a'])
+	message = ''.join(['\x02', 'r', 'e', 'l', 'a', '\x03'])
 	ser.write(bytes(message.encode()))
 
 def setting_control(self): # setting group box안의 redio button이 눌리면 호출
 	if self.radioButton_auto.isChecked(): # auto 버튼이 눌리면 메시지 전송
-		message = ''.join(['a', 'u', 't', 'o'])
+		message = ''.join(['\x02', 'a', 'u', 't', 'o', '\x03'])
 		ser.write(bytes(message.encode()))
 	elif self.radioButton_manual.isChecked(): # manual 버튼이 눌리면 메시지 전송
-		message = ''.join(['m', 'a', 'n', 'u'])
+		message = ''.join(['\x02', 'm', 'a', 'n', 'u', '\x03'])
 		ser.write(bytes(message.encode()))
 	
 def signals(self): # 각 버튼이 눌렸을 때 함수 호출
@@ -59,7 +66,7 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     ui.signals()
     ui.setting_control()
-
+    
     th = threading.Thread(target=read_thread, args=(ui,)) # 스레드 설정, read_thread함수에 인자로 ui를 넘겨준다
     th.daemon = True;
     th.start()
