@@ -45,7 +45,7 @@ def setting_control(self): # setting group box안의 redio button이 눌리면 �
 		message = ''.join(['\x02', 'a', 'u', 't', 'o', '\x03'])
 		ser.write(bytes(message.encode()))
 	elif self.radioButton_manual.isChecked(): # manual 버튼이 눌리면 메시지 전송
-		message = ''.join(['\x02', 'm', 'a', 'n', 'u', '\x03'])
+		message = ''.join(['\x02', 's', 'u', 'd', 'o', '\x03'])
 		ser.write(bytes(message.encode()))
 	
 def signals(self): # 각 버튼이 눌렸을 때 함수 호출
