@@ -1,4 +1,4 @@
-from draw import *
+from graph_2 import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 import serial
 import threading
