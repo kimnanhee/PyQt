@@ -5,7 +5,7 @@ import threading
 import pyqtgraph as pg
 from PyQt5.QtCore import pyqtSignal
 
-temp_list=[0]
+temp_list=[0] # 온도 저장 리스트
 humi_list=[0]
 receive_temp = 0
 receive_humi = 0
@@ -30,6 +30,7 @@ class draw_graph(QtWidgets.QMainWindow, Ui_MainWindow):
 		self.graphicsView.setBackground('#FFFFFF') # 배경 색깔
 		self.graphicsView.showGrid(x=True, y=True) # 그리드
 		self.graphicsView.setRange(xRange=[2, 20])
+		self.graphicsView.setRange(yRange=[2, 100])
 	
 	def uiUpdater(self):
 		self.graphicsView.clear() # 그래프 지우기
@@ -46,15 +47,15 @@ def read_thread(ui):
 		data = ser.readline().decode('utf-8')  
 		if data:
 			print(data)
-			temp = float(data[5:9]) # 온도 슬라이싱
+			temp = float(data[1:5]) # 온도 슬라이싱
 			now_temp = temp
-			humi = float(data[17:21]) # 습도 슬라이싱
+			humi = float(data[7:11]) # 습도 슬라이싱
 			now_humi = humi
 
-			ui.value_temp.setText(str(now_temp))
+			ui.value_temp.setText(str(now_temp)) # 라벨에 온도 표시
 			ui.value_humi.setText(str(now_humi))
 
-			temp_list.append(temp) # 리스트에 더하기
+			temp_list.append(temp) # 리스트에 붙이기
 			humi_list.append(humi)
 			
 			cnt=cnt+1
