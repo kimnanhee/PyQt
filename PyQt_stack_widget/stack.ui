@@ -7,57 +7,93 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_0">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>93</width>
-      <height>28</height>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>page 0</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>780</width>
+      <height>410</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="page_0">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 185, 185);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="page_1">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 175);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(191, 255, 190);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(185, 204, 255);</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_1">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>100</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>page 1</string>
     </property>
    </widget>
-   <widget class="QStackedWidget" name="stackedWidget">
+   <widget class="QPushButton" name="btn_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>700</width>
-      <height>500</height>
-     </rect>
-    </property>
-    <widget class="QWidget" name="page">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="page_2">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 201, 201);</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
+      <x>270</x>
       <y>10</y>
-      <width>93</width>
-      <height>28</height>
+      <width>100</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>page 2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_3">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>page 3</string>
     </property>
    </widget>
   </widget>
