@@ -23,21 +23,96 @@
       <height>800</height>
      </rect>
     </property>
-    <widget class="QWidget" name="page_1"/>
-    <widget class="QWidget" name="page_2"/>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QWidget" name="page_1">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <widget class="QPushButton" name="pushButton_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_1_design1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>750</y>
+        <width>1200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(94, 94, 94);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_message">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>610</y>
+        <width>200</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>화면을 클릭해주세요</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_1_design2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>740</y>
+        <width>1200</width>
+        <height>5</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(94, 94, 94);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>20</y>
+        <width>100</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3"/>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1200</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
