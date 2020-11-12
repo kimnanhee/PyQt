@@ -119,11 +119,15 @@
        </rect>
       </property>
       <property name="text">
-       <string/>
+       <string>fwewwefwefwefwefwefwef</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_3"/>
+    <widget class="QWidget" name="page_3">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

@@ -51,10 +51,10 @@ class Ui_MainWindow(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.label = QtWidgets.QLabel(self.page_2)
         self.label.setGeometry(QtCore.QRect(20, 20, 1050, 760))
-        self.label.setText("")
         self.label.setObjectName("label")
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
+        self.page_3.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.page_3.setObjectName("page_3")
         self.stackedWidget.addWidget(self.page_3)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -67,6 +67,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_message.setText(_translate("MainWindow", "화면을 클릭해주세요"))
         self.pushButton_2.setText(_translate("MainWindow", "Home"))
+        self.label.setText(_translate("MainWindow", "fwewwefwefwefwefwefwef"))
 
 
 if __name__ == "__main__":
