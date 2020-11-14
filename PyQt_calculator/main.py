@@ -1,4 +1,4 @@
-from cal_gui import *
+from cal_ui import *
 from PyQt5.QtWidgets import *
 
 def signals(self):
