@@ -1,3 +1,7 @@
+'''
+선택한 파일을 열고, 편집할 수 있다.
+편집한 내용을 저장할 수 있다.
+'''
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QAction, QFileDialog
 from PyQt5.QtGui import QIcon
