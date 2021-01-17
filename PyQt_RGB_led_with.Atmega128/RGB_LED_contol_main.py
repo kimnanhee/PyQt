@@ -11,14 +11,21 @@ ser = serial.Serial(
     timeout=1)
 
 def send_value(self):
-    r = int(self.textEdit_r.toPlainText())
-    g = int(self.textEdit_g.toPlainText())
-    b = int(self.textEdit_b.toPlainText())
-    message = '\x02'+ '{0:03d}{1:03d}{2:03d}'.format(r, g, b)+'\x03'
-    print(message)
-    print(type(message))
-    ser.write(bytes(message.encode()))
-    print(ser.read(9), 'response')
+    try:
+        r = int(self.textEdit_r.toPlainText())
+        g = int(self.textEdit_g.toPlainText())
+        b = int(self.textEdit_b.toPlainText())
+    except:
+        self.textEdit_r.setText("0")
+        self.textEdit_g.setText("0")
+        self.textEdit_b.setText("0")
+        print("잘못된 입력입니다.")
+    else:
+        message = '\x02'+ '{0:03d}{1:03d}{2:03d}'.format(r, g, b)+'\x03'
+        print(message)
+        print(type(message))
+        ser.write(bytes(message.encode()))
+        print(ser.read(9), 'response')
 
 def signals(self):
     self.textEdit_r.setText('0')
