@@ -41,7 +41,7 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
 
     th = threading.Thread(target=read_thread, args=(ui,)) # 스레드 설정, read_thread함수에 인자로 ui를 넘겨준다
-    th.daemon = True;
+    th.daemon = True
     th.start()
 
     MainWindow.show()
