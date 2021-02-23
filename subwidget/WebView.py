@@ -4,8 +4,13 @@ from PyQt5 import QtWebEngineWidgets
 from PyQt5 import QtWebEngineCore
 from PyQt5.QtWebEngineWidgets import QWebEngineSettings
 
-class Ui_MainWindow(object):
+class WebViewWidget(object):
     widget_List = []
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        if parent is not None:
+            self.resize(parent.size())
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 800)
