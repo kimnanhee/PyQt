@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from time import sleep
+from time import sleep, time
 import threading
 
 from ui import *
@@ -77,20 +77,24 @@ def flag_set(self):
 def start_set(self):
     while True:
         if self.flag:
-            check_list = []
-            for i, v in enumerate(self.table_list):
-                if v[2].isChecked(): check_list.append(i)
-            print("check list : ", check_list)
-
             self.stackedWidget.setCurrentIndex(3)
 
-            for check in check_list:
-                self.label_name_4.setText(self.set_list[check][0]) # 이름
-                self.label_set_4.setText("") # 세트
-                self.label_cnt_4.setText("") # 횟수
-                self.label_time_4.setText("1") # 초
-                print(check)
-                sleep(2)
+            self.res_list = [] # 결과 저장
+            for i, table in enumerate(self.table_list):
+                if table[2].isChecked():
+                    cnt = 0
+                    start_time = time()
+                    while True:
+                        self.label_name_4.setText(self.set_list[i][0]) # 이름
+                        self.label_set_4.setText("{0} 세트".format(cnt//20 + 1)) # 세트
+                        self.label_cnt_4.setText("{0} 회".format(cnt%20)) # 횟수
+                        self.label_time_4.setText("{0:.2f} s".format(time()-start_time)) # 초
+                        sleep(0.2)
+                        cnt += 1
+                        if cnt >= 2*20:
+                            break
+                    self.res_list.append([i, cnt//20, cnt, time()-start_time])
+                    print(self.res_list)
 
             self.flag = False
             self.end_set()
@@ -99,7 +103,7 @@ def start_set(self):
 def end_set(self):
     for row in range(5):
         if row < len(self.res_list):
-            self.table_list[row][3].setText("{0:20} {1}세트  {2}회  총 진행시간 {3}s".format(self.set_list[row][0], self.res_list[row][0], self.res_list[row][1], self.res_list[row][2]))
+            self.table_list[row][3].setText("{0:20} {1}세트     {2}회     총 진행시간 {3:.2f} s".format(self.set_list[self.res_list[row][0]][0], self.res_list[row][1], self.res_list[row][2], self.res_list[row][3]))
         else:
             self.table_list[row][3].setText("")
     
@@ -130,8 +134,8 @@ if __name__ == "__main__":
         [ui.label_name_4_2, ui.label_con1_4_2, ui.checkBox_4_2, ui.label_4_5],
         [ui.label_name_5_2, ui.label_con1_5_2, ui.checkBox_5_2, ui.label_5_5]
     ]
-    ui.set_list = [['등', 60, '보통', False, False, True], ['어깨', 30, '보통', True, True, False]]
-    ui.res_list = [[2, 2, 60], [5, 1, 300]]
+    ui.set_list = [['등', 60, '보통', False, False, True], ['어깨', 30, '보통', True, False, True]] # 테스트 데이터
+    ui.res_list = []
     ui.flag = False
 
     ui.label_start_1.setPixmap(QtGui.QPixmap("exercise.jpg"))
