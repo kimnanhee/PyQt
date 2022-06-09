@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="page_1">
     <widget class="QPushButton" name="btn_start_1">
@@ -1063,8 +1063,8 @@
      <property name="font">
       <font>
        <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -1083,8 +1083,8 @@
      <property name="font">
       <font>
        <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -1103,8 +1103,8 @@
      <property name="font">
       <font>
        <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -1123,8 +1123,8 @@
      <property name="font">
       <font>
        <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -1143,8 +1143,8 @@
      <property name="font">
       <font>
        <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
