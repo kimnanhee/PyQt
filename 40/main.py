@@ -24,7 +24,6 @@ def signals(self):
 
 
 def list_set(self): # 세트 목록
-    print(self.set_list)
     for row in range(5):
         if row < len(self.set_list):
             self.table_list[row][0].setText(self.set_list[row][0])
@@ -94,7 +93,6 @@ def start_set(self):
                         if cnt >= 2*20:
                             break
                     self.res_list.append([i, cnt//20, cnt, time()-start_time])
-                    print(self.res_list)
 
             self.flag = False
             self.end_set()
@@ -134,7 +132,7 @@ if __name__ == "__main__":
         [ui.label_name_4_2, ui.label_con1_4_2, ui.checkBox_4_2, ui.label_4_5],
         [ui.label_name_5_2, ui.label_con1_5_2, ui.checkBox_5_2, ui.label_5_5]
     ]
-    ui.set_list = [['등', 60, '보통', False, False, True], ['어깨', 30, '보통', True, False, True]] # 테스트 데이터
+    ui.set_list = []
     ui.res_list = []
     ui.flag = False
 

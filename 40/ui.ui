@@ -1055,7 +1055,7 @@
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>240</y>
+       <y>250</y>
        <width>800</width>
        <height>50</height>
       </rect>
@@ -1075,7 +1075,7 @@
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>320</y>
+       <y>330</y>
        <width>800</width>
        <height>50</height>
       </rect>
@@ -1095,7 +1095,7 @@
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>400</y>
+       <y>410</y>
        <width>800</width>
        <height>50</height>
       </rect>
@@ -1115,7 +1115,7 @@
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>480</y>
+       <y>490</y>
        <width>800</width>
        <height>50</height>
       </rect>
@@ -1135,7 +1135,7 @@
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>560</y>
+       <y>570</y>
        <width>800</width>
        <height>50</height>
       </rect>
@@ -1149,6 +1149,19 @@
      </property>
      <property name="text">
       <string/>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>220</y>
+       <width>1000</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </widget>
